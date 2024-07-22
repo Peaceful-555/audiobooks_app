@@ -65,7 +65,6 @@ pip install -r requirements.txt
    - Create a new MySQL database for the project
    - Update the `DATABASES` configuration in `audiobook_project/settings.py`:
      ```
-python
 DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.mysql',
