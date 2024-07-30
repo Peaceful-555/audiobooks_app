@@ -7,7 +7,7 @@ class Audiobook(models.Model):
   author = models.CharField(max_length=255)
   genre = models.CharField(max_length=100)
   description = models.TextField()
-  cover_image = models.URLField(max_length=20000)
+  cover_image = models.URLField(max_length=200)
 
   def __str__(self):
       return self.title
