@@ -46,28 +46,33 @@ To run the audiobook app locally, follow these steps:
 ### Backend Setup
 
 1. Navigate to the backend directory:
-type this in command prompt- 
+type this in command prompt-
+
 cd backend
 
 
-2. Create a virtual environment and activate it:
+3. Create a virtual environment and activate it:
 python -m venv venv
+
 cd venv
+
 -On Windows, use Scripts\activate to activate the venv
+
 cd ..
+
 cd audiobook_project
 
-3. Install the required packages:
+4. Install the required packages:
 
 pip install -r requirements.txt
 
 
 4. Set up the MySQL database: Connect your MySQL database to django project
 
-   - Open the django project in a code editor, for example- type code . to open the project in v s code
+   - Open the django project in a code editor, for example- type 'code .' to open the project in v s code
    - Create a new MySQL database for the project
    - Update the `DATABASES` configuration in `audiobook_project/settings.py`:
-     ```
+   
 DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.mysql',
@@ -83,6 +88,7 @@ DATABASES = {
 5. Run database migrations:
 
 python manage.py makemigrations
+
 python manage.py migrate
 
 
@@ -99,6 +105,7 @@ The backend should now be running at `http://localhost:8000/api/reviews/' and `h
 
 ### Frontend Setup
 Now open another terminal from the same folder and type the following:
+
 cd audiobooks_app
 
 1. Navigate to the frontend directory:
@@ -106,17 +113,23 @@ cd audiobooks_app
 cd frontend
 
 2. Create a virtual environment and activate it:
+   
 python -m venv venv
+
 cd venv
+
 -On Windows, use Scripts\activate to activate the venv
+
 cd ..
 
-2. Get the Flutter packages:
+3. Get the Flutter packages:
+
 cd audiobook_app
+
 flutter pub get
 
 
-3. Run the app:
+4. Run the app:
 
 flutter run -d chrome or flutter run -d edge  # For web
 
