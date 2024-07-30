@@ -36,32 +36,35 @@ Before you begin, ensure you have met the following requirements:
 ## Getting Started
 
 To run the audiobook app locally, follow these steps:
+1. Create a folder and open terminal from this folder
 
 ### Clone the Repository
-sh
-git clone https://github.com/Peaceful-555/audiobooks_app.git
-cd audiobooks_app
+2. Run this command to clone the repository - git clone https://github.com/Peaceful-555/audiobooks_app.git
+3. Type this to go inside the repository -cd audiobooks_app
 
 
 ### Backend Setup
 
 1. Navigate to the backend directory:
-sh
+type this in command prompt- 
 cd backend
 
 
 2. Create a virtual environment and activate it:
-sh
 python -m venv venv
-source venv/bin/activate  # On Windows, use venv\Scripts\activate
-
+cd venv
+# On Windows, use Scripts\activate to activate the venv
+cd ..
+cd audiobook_project
 
 3. Install the required packages:
-sh
+
 pip install -r requirements.txt
 
 
-4. Set up the MySQL database:
+4. Set up the MySQL database: Connect your MySQL database to django project
+
+   - Open the django project in a code editor, for example- type code . to open the project in v s code
    - Create a new MySQL database for the project
    - Update the `DATABASES` configuration in `audiobook_project/settings.py`:
      ```
@@ -78,44 +81,51 @@ DATABASES = {
 
 
 5. Run database migrations:
-sh
+
 python manage.py makemigrations
 python manage.py migrate
 
 
 6. Create a superuser:
-sh
+
 python manage.py createsuperuser
 
 
 7. Start the development server:
-sh
+
 python manage.py runserver
 
-
-   The backend should now be running at `http://localhost:8000/api/reviews/' and `http://localhost:8000/api/audiobooks/'
+The backend should now be running at `http://localhost:8000/api/reviews/' and `http://localhost:8000/api/audiobooks/'
 
 ### Frontend Setup
+Now open another terminal from the same folder and type the following:
+cd audiobooks_app
 
 1. Navigate to the frontend directory:
-sh
-cd ../frontend
 
+cd frontend
+
+2. Create a virtual environment and activate it:
+python -m venv venv
+cd venv
+# On Windows, use Scripts\activate to activate the venv
+cd ..
 
 2. Get the Flutter packages:
-sh
+cd audiobook_app
 flutter pub get
 
 
 3. Run the app:
-sh
-flutter run -d chrome  # For web
+
+flutter run -d chrome or flutter run -d edge  # For web
 
 or
 flutter run  # For mobile emulator
 
+The frontend should now be running on your browser on your localhost or emulator.
 
-   The frontend should now be running at `http://localhost:52360`.
+Now we can the add,update,delete and get the audiobooks or reviews from the frontend and the backend and always perform a hot restart on your application to reflect the changes. The data of audiobooks and reviews is also visible in the database. 
 
 ## API Endpoints
 
