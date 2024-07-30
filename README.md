@@ -53,7 +53,7 @@ cd backend
 2. Create a virtual environment and activate it:
 python -m venv venv
 cd venv
-# On Windows, use Scripts\activate to activate the venv
+-On Windows, use Scripts\activate to activate the venv
 cd ..
 cd audiobook_project
 
@@ -108,7 +108,7 @@ cd frontend
 2. Create a virtual environment and activate it:
 python -m venv venv
 cd venv
-# On Windows, use Scripts\activate to activate the venv
+-On Windows, use Scripts\activate to activate the venv
 cd ..
 
 2. Get the Flutter packages:
