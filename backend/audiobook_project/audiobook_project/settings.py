@@ -83,7 +83,7 @@ DATABASES = {
       'ENGINE': 'django.db.backends.mysql',
       'NAME': 'audiobook_db',
       'USER': 'root',
-      'PASSWORD': 'Mysql@78',
+      'PASSWORD': 'your_mysql_password',
       'HOST': 'localhost',
       'PORT': '3306',
   }
